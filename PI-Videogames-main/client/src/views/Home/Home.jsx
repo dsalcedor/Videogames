@@ -1,21 +1,20 @@
-import { useEffect, useState } from "react";
-import axios from 'axios'
+import CardsContainer from '../../components/CardsContainer'
 
 function Home() {
 
-  const [games, setGames] = useState([])
+  // const [games, setGames] = useState([])
 
-  useEffect(() => {
-    axios.get('localhost:3001/videogames')
-    .then(res=>res.json)
-    .then(data=> {
-      setGames([...games, data])
-    }) 
-  }, [])
+  // useEffect(() => {
+  //   axios.get('localhost:3001/videogames')
+  //   .then(res=>res.json)
+  //   .then(data=> {
+  //     setGames([...games, data])
+  //   }) 
+  // }, [])
 
   return (
     <div>
-      <h1>Esta es la vista Home</h1>
+      <CardsContainer />
     </div>
   );
 }
