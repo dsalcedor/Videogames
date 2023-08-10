@@ -5,7 +5,6 @@ import { useEffect } from "react";
 
 function Detail() {
   const { detailId } = useParams();
-  console.log(detailId)
   const dispatch = useDispatch();
   
   useEffect(() => {
@@ -13,7 +12,6 @@ function Detail() {
   }, [detailId]);
   
   const game = useSelector((state) => state.game);
-  console.log(game)
   
   
   return (
