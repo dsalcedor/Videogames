@@ -1,16 +1,17 @@
-import CardsContainer from '../../components/CardsContainer'
+import CardsContainer from '../../components/CardsContainer/CardsContainer'
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { getVideogames } from '../../redux/actions';
 
 function Home() {
 
-  // const [games, setGames] = useState([])
+  const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   axios.get('localhost:3001/videogames')
-  //   .then(res=>res.json)
-  //   .then(data=> {
-  //     setGames([...games, data])
-  //   }) 
-  // }, [])
+
+  useEffect(()=>{
+    dispatch(getVideogames())
+  }, [dispatch])
+
 
   return (
     <div>

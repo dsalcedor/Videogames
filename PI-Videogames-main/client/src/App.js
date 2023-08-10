@@ -1,5 +1,8 @@
 import "./App.css";
 import { Route, useLocation } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { getVideogames } from "./redux/actions";
 import Landing from "./views/Landing/Landing";
 import Home from "./views/Home/Home";
 import Form from "./views/Form/Form";
@@ -8,6 +11,8 @@ import Detail from "./views/Detail/Detail";
 
 function App() {
   const location = useLocation();
+  // const games = useSelector(videoGames);
+
 
   return (
     <div className="App">
