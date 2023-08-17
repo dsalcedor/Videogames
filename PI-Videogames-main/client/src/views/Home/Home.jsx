@@ -1,7 +1,7 @@
 import CardsContainer from '../../components/CardsContainer/CardsContainer'
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { getVideogames } from '../../redux/actions';
+import { getGenres, getVideogames } from '../../redux/actions';
 
 function Home() {
 
@@ -10,6 +10,10 @@ function Home() {
 
   useEffect(()=>{
     dispatch(getVideogames())
+  }, [dispatch])
+
+  useEffect(()=>{
+    dispatch(getGenres())
   }, [dispatch])
 
 
